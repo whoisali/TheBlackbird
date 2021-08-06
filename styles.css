@@ -1,0 +1,680 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
+/*     font-family: 'Montserrat', sans-serif;
+
+    font-family: 'Open Sans', sans-serif;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-family: 'Yellowtail', cursive;
+
+    font-family: 'Spartan', sans-serif; */
+
+
+
+@font-face {
+    font-family: Soul Regular;
+    src: url(fonts/MADE\ Soulmaze\ PERSONAL\ USE.otf);
+}
+
+@font-face {
+    font-family: Soul Italics;
+    src: url(fonts/MADE\ Soulmaze\ Italic\ PERSONAL\ USE.otf);
+}
+@font-face {
+    font-family: Soul Outline Regular;
+    src: url(fonts/MADE\ Soulmaze\ Outline\ PERSONAL\ USE.otf);
+}
+@font-face {
+    font-family: Soul Outline Italics;
+    src: url(fonts/MADE\ Soulmaze\ Outline\ Italic\ PERSONAL\ USE.otf);
+}
+@font-face {
+    font-family: Moon Regular;
+    src: url(fonts/Moon2.0-Regular.otf);
+}
+@font-face {
+    font-family: Current;
+    src: url(fonts/Current-Regular.otf);
+}
+@font-face {
+    font-family: Ailerons;
+    src: url(fonts/Ailerons-Regular.otf);
+}
+@font-face {
+    font-family: Bioweapon;
+    src: url(fonts/BIOWEAPON.ttf);
+}
+@font-face {
+    font-family: GKType;
+    src: url(fonts/Gktype01-10Glyphs.otf);
+}
+@font-face {
+    font-family: Kind of Magic;
+    src: url(fonts/KindofMagic-KindofMagicRegular-SVG.ttf);
+}
+@font-face {
+    font-family: Magilio;
+    src: url(fonts/MagilioRegular-8Mxvg.otf);
+}
+@font-face {
+    font-family: Odichi;
+    src: url(fonts/Odachi.otf);
+}
+@font-face {
+    font-family: Monument;
+    src: url(fonts/MonumentExtended-Black.otf);
+}
+@font-face {
+    font-family: Yokai;
+    src: url(fonts/Yokai.otf);
+}
+@font-face {
+    font-family: Brandon;
+    src: url(fonts/brandon-grotesque-black-58a8a3e824392.otf);
+}
+@font-face {
+    font-family: Yokai;
+    src: url(fonts/Yokai.otf);
+}
+@font-face {
+    font-family: Yokai;
+    src: url(fonts/Yokai.otf);
+}
+
+
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    overscroll-behavior-y: none;
+}
+
+html
+{
+    font-family: 'Roboto', sans-serif;
+    font-size: 10px;
+}
+
+header
+{
+    
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: background-color .5s ease;
+    z-index: 1000;
+}
+
+.container
+{
+    width: 100%;
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/******************** Hamburger Menu ***********************/
+
+.hamburger
+{
+    position: relative; 
+    left: auto;
+    float: right;
+    top: 45%;
+    height: 50px;
+    width: 40px;
+    right: 4px;
+    display: block;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    cursor: pointer;
+    padding: 10px;
+    margin-top: 5px;
+    margin-right: -10px;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+.hamburger.active .bar:nth-child(1) {
+    transform: translateY(4px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(2) {
+    transform: translateY(-4px) rotate(-45deg);
+}
+
+
+
+.bar
+{
+    height: 2px;
+    left: 10px;
+    position:absolute;   
+    top: 10px;
+    width: calc(100% - 20px);
+    background: #D9D9D9;
+    display: block;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
+.bar.open:nth-child(1)
+{
+  transform: rotate(45deg);
+}
+.bar:nth-child(2)
+{
+  top: 18px;
+}
+
+
+/******************* Pages Snap To Start ******************/
+
+section
+{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  
+}
+.data-scroll-container
+{
+  scroll-snap-type: y mandatory;
+  
+  height: 100vh;
+}
+
+/******************* Hamburger Menu *********************/
+
+
+
+.nav
+{
+    flex-wrap: wrap;
+    width: 100%;
+    height: 7.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid rgba(255,255,255,.05);
+    transition: height .5s ease;
+}
+
+.nav a
+{
+    text-decoration: none;
+    color: rosybrown;
+    font-size: 5rem;
+    
+}
+
+.nav .logo
+{
+    font-size: 2rem;
+    color: #D9D9D9;
+    
+    padding-top: 5.5px;
+    font-family: 'Spartan', sans-serif;
+    letter-spacing: -0.5px;
+    font-weight: 800;
+    
+    
+}
+
+.main-image
+{
+    position: relative;
+    align-items: center;
+    width: 39px;
+    height: 26px;
+    right: 70px;
+}
+
+
+
+.nav-link::after
+{
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: #4a5764;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .5s ease;
+}
+
+.nav-link
+{
+    
+    
+    font-family: 'Soul Regular';
+    margin: 0 2rem;
+    position: relative;
+}
+
+
+
+.nav-link:hover::after
+{
+    transform: scaleX(1);
+}
+
+/******************** Nav Reform ******************/
+.nav-list {
+    padding-top: 25vh;
+    height: 100vh;
+    position: fixed;
+    left: 120%;
+    top: 0rem;
+    flex-direction: column;
+    background-color: black;
+    width: 100%;
+    background-size: cover;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow:
+        0 10px 27px rgba(0, 0, 0, 0.05);
+}
+
+.nav-list p
+{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-top: 23vh;
+    color: rosybrown;
+}
+
+.nav-list.active {
+    
+    left: 0;
+}
+
+.nav-item {
+    
+    margin: 4rem ;
+}
+.nav-link.active
+{
+
+    color: white;
+}
+
+
+/*Apply styles after scroll*/
+.scrolling-active{
+    background-color: rgba(0, 0, 0, 0);
+    box-shadow: 0 3px 1rem rgba(0,0,0,.1);
+}
+
+.scrolling-active .line
+{
+    stroke: black;
+}
+
+.scrolling-active .nav{
+    height: 5.2rem;
+    border-bottom: none;
+}
+.scrolling-active .nav .logo{
+    color: #D9D9D9;
+}
+
+.scrolling-active .nav a{
+    color: rosybrown;
+}
+.scrolling-active .nav .logo{
+    padding-bottom: 5px;
+}
+
+
+.scrolling-active .nav-link::after{
+    background-color: #4a5764;
+}
+.scrolling-active .bar
+{
+    background-color: #D9D9D9;
+}
+.scrolling-active .hamburger
+{
+    top: 55%;
+}
+/*Apply styles after scroll end*/
+
+
+/* Hero Demo Content*/
+.hero
+{
+    width: 100%;
+    height: 100vh;
+    background: url("images/dark.jpg") center no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.hero .latestrelease
+{
+    z-index: 2;
+}
+.hero .latestrelease h1
+{
+    font-size: 9rem;
+    font-family: Yokai;
+    color: rgba(255, 255, 255, 0.7);
+}
+.hero .latestrelease p
+{
+    font-size: 5rem;
+    font-family: Odichi;
+    color: rgba(255,255,255,.5);
+    text-align: center;
+    
+}
+.hero .latestrelease button
+{
+    position: absolute;
+    margin:0;
+    top: 70%;
+    left: 50%;
+    border: 1px solid black;
+    padding: 14px 28px;
+    color: white;
+    background-color: black;
+    font-size: 1.5rem;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-family: Brandon;
+    cursor: pointer;
+    z-index: 2;
+    
+}
+
+
+
+
+
+.trade
+{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: Soul Outline Italics;
+    font-size: 7.3rem;
+    font-weight: bold;
+}
+
+.hero::after
+{
+    content: '';
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,.5);
+}
+
+.demo-content
+{
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    font-family: 'Odichi';
+    font-size: 8rem;
+    color: aqua;
+    
+}
+
+.thirdpage
+{
+    background: url("images/blackmore.jpg") center no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    background-color: whitesmoke;
+    font-family: 'Yokai';
+    font-size: 8rem;
+    color: rgb(190, 190, 190);
+    font-weight: bolder;
+}
+/* Hero end*/
+.footer-content
+{
+    height: 60px;
+}
+.footer
+{
+   
+   background-color: black;
+   border: 20px;
+   border-color: black;
+   border-style:solid;
+   width: 100%;
+   height: 60px;
+   
+
+}
+
+.footertext
+{
+    font-family: 'Poppins', sans-serif;
+    padding-left: 26px;
+    float: left;
+    color: #B7A049;
+    font-size: 12px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 500;
+    
+
+}
+
+.socialbox
+{
+    
+
+    float: right;    
+    text-align: center;
+    padding-right: 15px;
+    padding-top: 0px;
+    background-color: #000;
+}
+
+.socialtext a
+{
+    padding-right: 20px;
+    color: #B7A049;
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 12px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/**************** Scroll Indicator **********************/
+.progress-section
+{
+  position: fixed;
+  right: 50px;
+  top: 40%;
+  width: 6px;
+  height: 20%;
+  display: flex;
+  justify-content: space-between;
+  will-change: transform;
+  transition: 0.3s ease-out;
+}
+
+.progress-bar-wrap
+{
+  position: relative;
+  width: 2px;
+  overflow: hidden;
+  background-color: rgb(189, 189, 189);
+
+}
+
+.progress-bar
+{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 0%;
+  background-color: rgb(70, 70, 70);
+}
+
+
+::-webkit-scrollbar
+{
+  display: none;
+}
+
+
+/********************* Page Indicator ********************/
+/***************************
+.pageIndicator {
+    height:135px;
+    left:calc(50% + 600px);
+    position:fixed;
+    top:50%;
+    width:2px;
+    -webkit-transform:translate3d(-50%,-50%,0);
+    -moz-transform:translate3d(-50%,-50%,0);
+    -o-transform:translate3d(-50%,-50%,0);
+    -ms-transform:translate3d(-50%,-50%,0);
+    transform:translate3d(-50%,-50%,0);
+    z-index:1;
+    opacity:0;
+    margin-top:-14px;
+    mix-blend-mode:difference;
+    -webkit-transition:opacity 0.6s 0.9s,margin-top 0.6s 0.9s;
+    -moz-transition:opacity 0.6s 0.9s,margin-top 0.6s 0.9s;
+    -ms-transition:opacity 0.6s 0.9s,margin-top 0.6s 0.9s;
+    -o-transition:opacity 0.6s 0.9s,margin-top 0.6s 0.9s;
+    transition:opacity 0.6s 0.9s,margin-top 0.6s 0.9s
+   }
+   .pageIndicator.active {
+    margin-top:-34px;
+    opacity:1
+   }
+   .pageIndicator .topBar {
+    height:0;
+    left:0;
+    position:absolute;
+    top:0;
+    width:100%;
+    background:#fff
+   }
+   .pageIndicator .bottomBar {
+    height:100%;
+    left:0;
+    position:absolute;
+    top:auto;
+    width:100%;
+    bottom:0
+   }
+   .pageIndicator .bottomBar:after {
+    content:"";
+    height:calc(100% - 0px);
+    left:0;
+    position:absolute;
+    top:auto;
+    width:100%;
+    bottom:0;
+    background:rgba(255,255,255,.2)
+   }
+   .pageIndicator .bottomBar:before {
+    content:"";
+    height:2px;
+    left:0;
+    position:absolute;
+    top:8px;
+    width:100%;
+    border-radius:50%;
+    background:#fff
+   }
+
+*******************************/
+
+
+
+@media only screen and (max-width: 768px) {
+    
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+
+   
+    .logo
+    {
+        display: none;
+    }
+    .progress-section
+    {
+        display: none;
+    }
+    
+    .main-image
+    {
+        display: block;
+        left: 43vw;
+    }
+    
+    
+
+
+}
+    /*
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 5rem;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 2.5rem 0;
+    }
+
+    */
