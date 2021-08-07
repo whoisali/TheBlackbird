@@ -477,7 +477,7 @@ section
 .footer
 {
    
-   background-color: black;
+   background-color: #000000;
    border: 20px;
    border-color: black;
    border-style:solid;
@@ -490,9 +490,9 @@ section
 .footertext
 {
     font-family: 'Poppins', sans-serif;
-    padding-left: 26px;
+    padding-left: 20px;
     float: left;
-    color: rgba(255, 255, 255, 0.5);
+    color: #bfbfbf;
     font-size: 12px;
     text-align: center;
     text-transform: uppercase;
@@ -504,22 +504,18 @@ section
 .socialbox
 {
     
-
+    
     float: right;    
     text-align: center;
-    padding-right: 15px;
+    display: inline-block;
     padding-top: 0px;
     background-color: #000;
 }
 
-.socialtext a
+.socialtext img
 {
-    padding-right: 20px;
-    color: rgba(255,255,255,.5);
-    font-weight: 500;
-    text-decoration: none;
-    font-size: 12px;
-    font-family: 'Poppins', sans-serif;
+    padding-right: 10px;
+    height: 30px;
 }
 
 /**************** Scroll Indicator **********************/
@@ -658,6 +654,25 @@ section
         margin-top: -13px;
         margin-left: -20px;
         text-align: center;
+    }
+    .footer
+    {
+        display: block;
+    }
+    .footertext
+    {
+        font-size: 1rem;
+        text-align: center;
+    }
+    .socialtext
+    {
+        margin-right: 0;
+        display: inline-block;
+        
+    }
+    .socialtext img
+    {
+        height: 25px;
     }
     
     
