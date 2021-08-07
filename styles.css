@@ -469,6 +469,20 @@ section
     color: rgb(190, 190, 190);
     font-weight: bolder;
 }
+.mobile-social
+{
+    display: none;
+    height: 60px;
+    background-color: black;
+    
+}
+.mobilesocial img
+{
+    display: inline-block;
+    height: 25px;
+    
+
+}
 /* Hero end*/
 .footer-content
 {
@@ -514,8 +528,8 @@ section
 
 .socialtext img
 {
-    padding-right: 10px;
-    height: 30px;
+    padding-right: 15px;
+    height: 25px;
 }
 
 /**************** Scroll Indicator **********************/
@@ -655,6 +669,20 @@ section
         margin-left: -20px;
         text-align: center;
     }
+    .mobile-social
+    {
+        display: flex;
+        height: 60px;
+    }
+    .mobilesocial img
+    {
+        margin-bottom: 10px;
+        margin-right: 10px;
+    }
+    .footer-content
+    {
+        height: 20px;
+    }
     .footer
     {
         display: block;
@@ -662,18 +690,16 @@ section
     .footertext
     {
         font-size: 1rem;
+        padding-left: 25%;
         text-align: center;
     }
     .socialtext
     {
+        display: none;
         margin-right: 0;
-        display: inline-block;
         
     }
-    .socialtext img
-    {
-        height: 25px;
-    }
+    
     
     
 
